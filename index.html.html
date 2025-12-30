@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>北海道 冬旅 2026（雪まつり×旭山×流氷）</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: "Noto Sans JP", sans-serif; }
+    .font-en { font-family: "Montserrat", sans-serif; }
+    .hero-bg { background: radial-gradient(circle at center, #0f172a 0%, #070b14 100%); }
+
+    /* Fade-in */
+    .fade-in-section { opacity: 0; transform: translateY(18px); transition: opacity .7s ease-out, transform .7s ease-out; }
+    .fade-in-section.is-visible { opacity: 1; transform: none; }
+
+    /* Focus ring */
+    a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid rgba(59,130,246,.6); outline-offset: 2px; border-radius: 12px; }
+
+    /* Print */
+    @media print {
+      nav, .no-print { display: none !important; }
+      main { padding-top: 0 !important; }
+      section { break-inside: avoid; }
+      body { background: #fff !important; color: #000 !important; }
+      .print-flat { box-shadow: none !important; border: 1px solid #e5e7eb !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4 overflow-x-auto">
+      <div class="font-bold text-slate-800 text-sm md:text-base whitespace-nowrap">
+        <span class="text-blue-600">HOKKAIDO</span> WINTER 2026
+      </div>
+
+      <div class="flex items-center gap-1 md:gap-4 text-xs md:text-sm font-bold text-slate-500 whitespace-nowrap">
+        <a href="#top" class="hover:text-blue-600 px-2 py-1 transition">Top</a>
+        <a href="#overview" class="hover:text-blue-600 px-2 py-1 transition">概要</a>
+        <a href="#route" class="hover:text-blue-600 px-2 py-1 transition">ルート</a>
+        <a href="#day1" class="hover:text-blue-600 px-2 py-1 transition">Day1</a>
+        <a href="#day2" class="hover:text-blue-600 px-2 py-1 transition">Day2</a>
+        <a href="#day3" class="hover:text-blue-600 px-2 py-1 transition">Day3</a>
+        <a href="#day4" class="hover:text-blue-600 px-2 py-1 transition">Day4</a>
+        <a href="#day5" class="hover:text-blue-600 px-2 py-1 transition">Day5</a>
+        <a href="#budget" class="hover:text-blue-600 px-2 py-1 transition">費用</a>
+        <a href="#actions" class="hover:text-blue-600 px-2 py-1 transition">ToDo</a>
+
+        <button id="btnPrint" class="no-print ml-2 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 transition">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>印刷</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-16">
+
+    <!-- Hero -->
+    <section id="top" class="min-h-[92vh] flex flex-col items-center justify-center p-8 text-center hero-bg text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542640244-7e67286feb8f?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-15 mix-blend-overlay"></div>
+
+      <div class="relative z-10 max-w-4xl fade-in-section">
+        <div class="inline-flex items-center justify-center p-4 bg-white/10 backdrop-blur-lg rounded-full mb-6">
+          <i data-lucide="snowflake" class="w-10 h-10 text-cyan-300"></i>
+        </div>
+
+        <h1 class="text-4xl md:text-7xl font-en font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">
+          Hokkaido Winter Golden Loop
+        </h1>
+
+        <p class="mt-4 text-lg md:text-2xl text-slate-200 font-light">
+          新千歳 → 旭川 → 札幌 → 北見 → 紋別（ガリンコ） → 小樽 → 札幌 → 新千歳
+          <span class="text-sm md:text-base mt-2 block opacity-80">2026.2.9 (Mon) – 2.13 (Fri) / 4泊5日</span>
+        </p>
+
+        <div class="mt-6 flex flex-wrap justify-center gap-3">
+          <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm">残留：つーちゃん / 上角（あなた）</span>
+          <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm">2/11帰宅：つぼけん（ホテル泊）</span>
+        </div>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm">旭山「雪あかり」最終日（2/9）</span>
+          <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm">雪まつり（〜2/11）</span>
+          <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm">ガリンコ号（2/12）</span>
+          <span class="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm">帰りは夜便（2/13）</span>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+          <div class="p-5 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+            <div class="flex items-center gap-2 text-cyan-200 font-bold mb-2">
+              <i data-lucide="bed" class="w-5 h-5"></i> 宿（方針）
+            </div>
+            <div class="text-sm text-slate-100">
+              2/9 旭川：快活（上角＋つーちゃん） / つぼけんはホテル<br>
+              2/10 札幌：快活（上角＋つーちゃん） / つぼけんはホテル<br>
+              2/11 北見：ルートイン（2名）<br>
+              2/12 小樽：5,000円/人（2名）
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+            <div class="flex items-center gap-2 text-cyan-200 font-bold mb-2">
+              <i data-lucide="ticket" class="w-5 h-5"></i> 交通（最安ロジック）
+            </div>
+            <div class="text-sm text-slate-100">
+              残留2名：Peachひがし北海道フリーパス（U25・4日）<br>
+              つぼけん：都度払い（パス不要）
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/10 border border-white/15 backdrop-blur-md">
+            <div class="flex items-center gap-2 text-cyan-200 font-bold mb-2">
+              <i data-lucide="badge-percent" class="w-5 h-5"></i> 快活の運用（予約済）
+            </div>
+            <div class="text-sm text-slate-100">
+              予約しているので <b>遅めに入店</b>して<br>
+              <b>ナイト8時間パック or 9時間料金</b>を狙う<br>
+              （店・曜日で料金が変動）
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-10 animate-bounce opacity-70">
+        <i data-lucide="chevron-down" class="w-8 h-8"></i>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="py-16 px-4 bg-white border-b border-slate-200">
+      <div class="max-w-6xl mx-auto space-y-10 fade-in-section">
+        <div class="text-center space-y-3">
+          <h2 class="text-3xl font-bold">旅の全体像（プレゼン用）</h2>
+          <p class="text-slate-500">「交通・宿を削って、体験（流氷）に寄せる」</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 print-flat">
+            <div class="flex items-center gap-2 mb-3">
+              <i data-lucide="target" class="w-6 h-6 text-blue-600"></i>
+              <h3 class="font-bold text-lg">絶対に外さない3点</h3>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+              <li>旭山動物園「雪あかり」（2/9）</li>
+              <li>さっぽろ雪まつり（〜2/11）</li>
+              <li>流氷：ガリンコ号（2/12）</li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 print-flat">
+            <div class="flex items-center gap-2 mb-3">
+              <i data-lucide="wallet" class="w-6 h-6 text-cyan-600"></i>
+              <h3 class="font-bold text-lg">コスト最適化</h3>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+              <li>残留2名は「U25フリーパス」でJRを圧縮</li>
+              <li>紋別の宿高騰を回避 → 北見泊</li>
+              <li>快活は「遅め入店」でナイト料金を狙う</li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 print-flat">
+            <div class="flex items-center gap-2 mb-3">
+              <i data-lucide="alert-triangle" class="w-6 h-6 text-indigo-600"></i>
+              <h3 class="font-bold text-lg">冬のリスク設計</h3>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+              <li>遅延前提：毎日30–60分バッファ</li>
+              <li>快活：入店時刻で“朝まで”を制御</li>
+              <li>ガリンコ号：当日の動線を前夜に固定</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl bg-blue-50 border border-blue-100 print-flat">
+            <div class="flex items-center gap-2 text-blue-900 font-bold mb-2">
+              <i data-lucide="backpack" class="w-5 h-5"></i> 生存装備（必須）
+            </div>
+            <ul class="text-sm text-blue-900/90 space-y-1 list-disc pl-5">
+              <li>耳栓・アイマスク（快活対策：残留2名）</li>
+              <li>モバイルバッテリー（移動が長い）</li>
+              <li>防寒（手袋・帽子・ネックウォーマー）</li>
+              <li>小さめ荷物（ブースが狭い）</li>
+            </ul>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-amber-50 border border-amber-100 print-flat">
+            <div class="flex items-center gap-2 text-amber-900 font-bold mb-2">
+              <i data-lucide="ship" class="w-5 h-5"></i> ガリンコ号当日の優先順位
+            </div>
+            <ul class="text-sm text-amber-900/90 mt-2 space-y-1 list-disc pl-5">
+              <li>北見→遠軽（特急）→紋別（バス）で昼便に合わせる</li>
+              <li>セコマ→港→受付→12:30便（最優先）</li>
+              <li>乗船後に札幌へ戻り、小樽は“泊まり”で回収</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Route -->
+    <section id="route" class="py-16 px-4 bg-slate-50 border-b border-slate-200">
+  <div class="max-w-6xl mx-auto fade-in-section space-y-10">
+    <div class="text-center space-y-3">
+      <h2 class="text-3xl font-bold">ルート（JRフリーパス前提・効率重視）</h2>
+      <p class="text-slate-500">3人で旭川→札幌まで一緒に行動／2/11に「つぼけん帰宅」／上角＋つーちゃんは北見→紋別→小樽へ</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 print-flat">
+        <div class="flex items-center gap-2 font-bold mb-1"><i data-lucide="paw-print" class="text-slate-700 w-5 h-5"></i> Day1</div>
+        <div class="text-sm text-slate-600">新千歳→札幌→旭川<br><b>旭山（夜）</b><br>宿：SPA&SAUNA オスパー（3名）</div>
+      </div>
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 print-flat">
+        <div class="flex items-center gap-2 font-bold mb-1"><i data-lucide="snowflake" class="text-blue-600 w-5 h-5"></i> Day2</div>
+        <div class="text-sm text-slate-600">旭川→札幌<br><b>雪まつり</b><br>宿：快活CLUB 環状通東（2名）＋ホテル（つぼけん）</div>
+      </div>
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 print-flat">
+        <div class="flex items-center gap-2 font-bold mb-1"><i data-lucide="split" class="text-emerald-600 w-5 h-5"></i> Day3</div>
+        <div class="text-sm text-slate-600">つぼけん：帰宅（時間自由）<br>上角＋つーちゃん：札幌→北見<br>宿：ルートイン北見（2名）</div>
+      </div>
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 print-flat">
+        <div class="flex items-center gap-2 font-bold mb-1"><i data-lucide="ship" class="text-cyan-700 w-5 h-5"></i> Day4</div>
+        <div class="text-sm text-slate-600">北見→遠軽→紋別<br><b>ガリンコ号 12:30</b><br>札幌経由→小樽／宿：和の風</div>
+      </div>
+      <div class="p-5 rounded-2xl bg-white border border-slate-200 print-flat">
+        <div class="flex items-center gap-2 font-bold mb-1"><i data-lucide="plane" class="text-indigo-700 w-5 h-5"></i> Day5</div>
+        <div class="text-sm text-slate-600">小樽観光→札幌（歴史館）→新千歳<br>夜便で帰阪（22:00着）</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 print-flat">
+        <div class="flex items-center gap-2 font-bold mb-2"><i data-lucide="ticket" class="w-5 h-5 text-slate-700"></i> 交通の前提</div>
+        <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+          <li>JR 4日間フリーパスを最大活用（特急移動の多い日をパス期間に寄せる）</li>
+          <li>紋別（バス）とガリンコ号は別料金</li>
+          <li>空港アクセスは快速エアポート（札幌⇄新千歳）</li>
+        </ul>
+      </div>
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 print-flat">
+        <div class="flex items-center gap-2 font-bold mb-2"><i data-lucide="bag" class="w-5 h-5 text-slate-700"></i> 生存戦略</div>
+        <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+          <li>荷物は最小限（バス・快活・移動の多さがネック）</li>
+          <li>セコマで「時間を買う」日を作る（紋別は特にタイト）</li>
+          <li>予約必須：雪印メグミルク酪農と乳の歴史館（平日枠のみ）</li>
+        </ul>
+      </div>
+      <div class="p-6 rounded-3xl bg-white border border-slate-200 print-flat">
+        <div class="flex items-center gap-2 font-bold mb-2"><i data-lucide="utensils" class="w-5 h-5 text-slate-700"></i> グルメ方針</div>
+        <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+          <li>旭川：青葉／蜂屋・天金（ラーメンは朝・昼で確保）</li>
+          <li>札幌：回転寿司（花まる or 魚やろう等）</li>
+          <li>北見：焼肉（味覚園を第一候補）</li>
+          <li>小樽：なるとは2/13昼に固定</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Day 1 -->
+    <section id="day1" class="py-16 px-4 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto fade-in-section">
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+      <div class="flex items-center gap-4">
+        <span class="text-4xl font-en font-black text-slate-200">01</span>
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Day 1：新千歳 → 札幌（セコマ） → 旭川 → 旭山（夜）</h2>
+          <p class="text-slate-500 mt-1">2/9（月）旭山「雪あかり」最終日を閉園20:30まで</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full text-xs font-bold text-slate-700 border border-slate-200">上角 / つーちゃん / つぼけん</span>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-700 border border-cyan-100">宿：SPA&SAUNA オスパー（3名）</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Timeline -->
+      <div class="lg:col-span-2 bg-slate-50 rounded-3xl border border-slate-200 p-6 md:p-8 print-flat">
+        <div class="flex items-center gap-2 mb-6">
+          <i data-lucide="clock" class="w-5 h-5 text-slate-600"></i>
+          <h3 class="font-bold text-lg">時間割（旭山は20:30まで滞在）</h3>
+        </div>
+
+        <ol class="relative border-s border-slate-300 pl-6 space-y-6">
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">12:00</div>
+            <div class="font-bold">新千歳空港 到着</div>
+            <div class="text-sm text-slate-600">空港では食事を取らず、すぐ移動して時間を稼ぐ。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">12:29–13:07</div>
+            <div class="font-bold">快速エアポート：新千歳 → 札幌</div>
+            <div class="text-sm text-slate-600">札幌駅でセコマに寄る前提（空港より効率が良い）。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-amber-600 ring-4 ring-white"></span>
+            <div class="font-mono text-amber-700 font-bold">13:10–13:25</div>
+            <div class="font-bold">札幌駅：セイコーマートで昼食・飲み物調達</div>
+            <div class="text-sm text-slate-600">移動優先の「時短飯」枠。ホットシェフ＋飲み物で十分。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">14:00–15:25</div>
+            <div class="font-bold">特急：札幌 → 旭川</div>
+            <div class="text-sm text-slate-600">JRフリーパスで特急移動（混雑時は早めに自由席へ）。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">15:40–16:05</div>
+            <div class="font-bold">オスパーに荷物置き（最短で行動開始）</div>
+            <div class="text-sm text-slate-600">チェックイン可否は当日動きながら。荷物は最小限に。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">16:10 or 16:40</div>
+            <div class="font-bold">バス：旭川市内 → 旭山動物園</div>
+            <div class="text-sm text-slate-600">2/9は臨時便が30分間隔。帰りは20:40最終を想定。運賃は片道500円。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">17:00–20:30</div>
+            <div class="font-bold">旭山動物園「雪あかりの動物園」</div>
+            <div class="text-sm text-slate-600">暗くなるほど映える。写真は後半が本番。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">20:40–21:20頃</div>
+            <div class="font-bold">最終バスで市内へ（ホテル最寄りで下車）</div>
+            <div class="text-sm text-slate-600">旭川駅には戻らず、ホテル近くで降りてそのまま就寝準備へ。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-700 ring-4 ring-white"></span>
+            <div class="font-mono text-emerald-700 font-bold">21:30–</div>
+            <div class="font-bold">夕食（当日の到着時刻で選ぶ）</div>
+            <div class="text-sm text-slate-600">①オスパー館内レストラン（L.O.21:00想定）／②近場のラーメン（例：鷹の爪 宮前店 〜21:00）／③セコマで買って部屋で食べる。</div>
+          </li>
+        </ol>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="utensils" class="w-4 h-4 text-blue-600"></i> 食事（Day1）
+            </div>
+            <div class="text-sm text-slate-600">
+              昼：札幌駅でセコマ（ホットシェフ＋飲み物）<br>
+              夜：<b>①館内レストラン</b> or <b>②ラーメン</b> or <b>③セコマ</b><br>
+              <span class="text-xs text-slate-500">目安：1,800〜3,500円/人（選択で上下）</span>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="ear" class="w-4 h-4 text-slate-600"></i> 持ち物（必須）
+            </div>
+            <div class="text-sm text-slate-600">
+              モバイルバッテリー／耳栓・アイマスク／防寒（手袋・ネックウォーマー）／現金少し（バス・小規模店）
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-4">
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="bed" class="w-5 h-5 text-slate-700"></i>
+            <h3 class="font-bold text-lg">宿（Day1）</h3>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-cyan-50 border border-cyan-100">
+            <div class="font-bold text-cyan-900">SPA&SAUNA オスパー（旭川）</div>
+            <div class="text-sm text-cyan-900/80 mt-1">3名同泊。サウナ・風呂で回復して翌日に備える。</div>
+            <div class="mt-2 text-xs text-cyan-900/70">料金は予約画面に合わせて反映（このHTMLでは手入力前提）。</div>
+          </div>
+
+          <div class="mt-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="text-sm text-slate-700">
+              <b>ポイント：</b>旭山の帰りは旭川駅に戻らない。ホテル最寄りで降りて、夕食→即休む。
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="font-bold mb-2 flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> 今日の達成
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+            <li>旭山「雪あかり」最終日を閉園まで回収</li>
+            <li>札幌セコマで時短、移動を最優先</li>
+            <li>夜はホテル最寄り下車で体力温存</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Day 2 -->
+    <section id="day2" class="py-16 px-4 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto fade-in-section">
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+      <div class="flex items-center gap-4">
+        <span class="text-4xl font-en font-black text-slate-200">02</span>
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Day 2：旭川（冬まつり/ラーメン） → 札幌（雪まつり/寿司）</h2>
+          <p class="text-slate-500 mt-1">2/10（火）旭川でラーメンを固め取り、札幌夜は寿司へ</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full text-xs font-bold text-slate-700 border border-slate-200">上角 / つーちゃん / つぼけん</span>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-700 border border-cyan-100">宿：快活CLUB 環状通東（2名）＋ホテル（つぼけん）</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-slate-50 rounded-3xl border border-slate-200 p-6 md:p-8 print-flat">
+        <div class="flex items-center gap-2 mb-6">
+          <i data-lucide="clock" class="w-5 h-5 text-slate-600"></i>
+          <h3 class="font-bold text-lg">時間割（旭川→札幌）</h3>
+        </div>
+
+        <ol class="relative border-s border-slate-300 pl-6 space-y-6">
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-amber-600 ring-4 ring-white"></span>
+            <div class="font-mono text-amber-700 font-bold">朝</div>
+            <div class="font-bold">旭川ラーメン：青葉（朝ラーメン）</div>
+            <div class="text-sm text-slate-600">開店時間に合わせて短時間で回収。混む前に入る。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">午前</div>
+            <div class="font-bold">旭川冬まつり</div>
+            <div class="text-sm text-slate-600">写真は明るい時間に。寒いので休憩を挟む。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-amber-600 ring-4 ring-white"></span>
+            <div class="font-mono text-amber-700 font-bold">昼</div>
+            <div class="font-bold">旭川ラーメン：天金 or 蜂屋</div>
+            <div class="text-sm text-slate-600">天金（しっかり系）／蜂屋（香ばし系）のどちらかを選んで“昼で〆る”。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">13:00–14:25</div>
+            <div class="font-bold">特急：旭川 → 札幌</div>
+            <div class="text-sm text-slate-600">到着後は荷物を預けて、徒歩と地下鉄で雪まつりへ。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">夕方〜夜</div>
+            <div class="font-bold">さっぽろ雪まつり（大通・すすきの）</div>
+            <div class="text-sm text-slate-600">夜景が本番。移動は地下鉄メイン。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-700 ring-4 ring-white"></span>
+            <div class="font-mono text-emerald-700 font-bold">夜</div>
+            <div class="font-bold">寿司で締める（バーなし）</div>
+            <div class="text-sm text-slate-600">第一：根室花まる（JRタワー）／第二：魚やろう／第三：パサール（営業日注意）。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-700 ring-4 ring-white"></span>
+            <div class="font-mono text-emerald-700 font-bold">23:30–</div>
+            <div class="font-bold">宿へ（遅め入店でナイトパック狙い）</div>
+            <div class="text-sm text-slate-600">上角＋つーちゃん：快活CLUB（環状通東）／つぼけん：ホテル（1泊1万円）。</div>
+          </li>
+        </ol>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="utensils" class="w-4 h-4 text-blue-600"></i> 食事（Day2）
+            </div>
+            <div class="text-sm text-slate-600">
+              朝：青葉（旭川）<br>
+              昼：天金 or 蜂屋（旭川）<br>
+              夜：回転寿司（花まる）or 海鮮居酒屋（魚やろう）or パサール<br>
+              <span class="text-xs text-slate-500">目安：3,000〜6,000円/人</span>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="wallet" class="w-4 h-4 text-slate-600"></i> 立ち回り
+            </div>
+            <div class="text-sm text-slate-600">
+              夜は寿司で満足度を取り、バーは削ってコスト最適化。快活は「遅め入店」で料金を下げる。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="bed" class="w-5 h-5 text-slate-700"></i>
+            <h3 class="font-bold text-lg">宿（Day2）</h3>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-cyan-50 border border-cyan-100">
+            <div class="font-bold text-cyan-900">上角＋つーちゃん：快活CLUB 札幌環状通東店</div>
+            <div class="text-sm text-cyan-900/80 mt-1">予約済。遅め入店でナイト8h/9hを狙う。</div>
+          </div>
+
+          <div class="mt-3 p-4 rounded-2xl bg-indigo-50 border border-indigo-100">
+            <div class="font-bold text-indigo-900">つぼけん：札幌のホテル</div>
+            <div class="text-sm text-indigo-900/80 mt-1">1泊：10,000円（指定）</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="font-bold mb-2 flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> 今日の達成
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+            <li>旭川ラーメンを朝・昼で回収</li>
+            <li>札幌雪まつり＋回転寿司で満足度最大化</li>
+            <li>宿はコスト優先（快活＋ホテル分離）</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Day 3 -->
+    <section id="day3" class="py-16 px-4 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto fade-in-section">
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+      <div class="flex items-center gap-4">
+        <span class="text-4xl font-en font-black text-slate-200">03</span>
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Day 3：札幌（昼：スープカレー） → 北見（夜：焼肉）</h2>
+          <p class="text-slate-500 mt-1">2/11（水・祝）つぼけん帰宅／上角＋つーちゃんは東へ</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full text-xs font-bold text-slate-700 border border-slate-200">午前：3名／午後：2名（上角・つーちゃん）</span>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-700 border border-cyan-100">宿：ルートイン北見（2名）</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-slate-50 rounded-3xl border border-slate-200 p-6 md:p-8 print-flat">
+        <div class="flex items-center gap-2 mb-6">
+          <i data-lucide="clock" class="w-5 h-5 text-slate-600"></i>
+          <h3 class="font-bold text-lg">時間割（札幌→北見）</h3>
+        </div>
+
+        <ol class="relative border-s border-slate-300 pl-6 space-y-6">
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">午前</div>
+            <div class="font-bold">札幌で自由行動（雪まつり最終日回収など）</div>
+            <div class="text-sm text-slate-600">昼のスープカレーに合わせて移動を調整。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-amber-600 ring-4 ring-white"></span>
+            <div class="font-mono text-amber-700 font-bold">昼</div>
+            <div class="font-bold">スープカレー（どちらか）</div>
+            <div class="text-sm text-slate-600">
+              <b>候補A：</b>SOUP CURRY KING セントラル店（混雑しがち、通し営業日あり）<br>
+              <b>候補B：</b>スープカレー奥芝商店 実家（定番人気、月曜定休）
+            </div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></span>
+            <div class="font-mono text-indigo-700 font-bold">午後（任意）</div>
+            <div class="font-bold">つぼけん：新千歳へ移動→帰阪（時間自由）</div>
+            <div class="text-sm text-slate-600">上角＋つーちゃんは15:30発の特急に合わせて札幌駅へ。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">15:30–20:02</div>
+            <div class="font-bold">特急オホーツク：札幌 → 北見</div>
+            <div class="text-sm text-slate-600">JRフリーパス利用。到着後はホテルへ直行。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-700 ring-4 ring-white"></span>
+            <div class="font-mono text-emerald-700 font-bold">夜</div>
+            <div class="font-bold">北見の夜は焼肉</div>
+            <div class="text-sm text-slate-600">第一：炭焼味覚園／代替：炙屋・百萬力など（混雑時用）。</div>
+          </li>
+        </ol>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="utensils" class="w-4 h-4 text-blue-600"></i> 食事（Day3）
+            </div>
+            <div class="text-sm text-slate-600">
+              昼：スープカレー（KING or 奥芝実家）<br>
+              夜：北見焼肉（味覚園）<br>
+              <span class="text-xs text-slate-500">目安：3,500〜7,000円/人</span>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="map-pin" class="w-4 h-4 text-slate-600"></i> 立ち回り
+            </div>
+            <div class="text-sm text-slate-600">
+              15:30発に間に合うよう、昼は待ち時間が読める店を優先。長蛇の列なら候補を即切り替え。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="bed" class="w-5 h-5 text-slate-700"></i>
+            <h3 class="font-bold text-lg">宿（Day3）</h3>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-cyan-50 border border-cyan-100">
+            <div class="font-bold text-cyan-900">ホテルルートイン北見大通西</div>
+            <div class="text-sm text-cyan-900/80 mt-1">2名で宿泊（朝食あり）。翌日は早出で紋別へ。</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="font-bold mb-2 flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> 今日の達成
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+            <li>札幌でスープカレーを回収</li>
+            <li>つぼけん帰宅の分岐を整理</li>
+            <li>北見で焼肉、翌日の移動に備える</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Day 4 -->
+    <section id="day4" class="py-16 px-4 bg-white border-b border-slate-200">
+  <div class="max-w-6xl mx-auto fade-in-section">
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+      <div class="flex items-center gap-4">
+        <span class="text-4xl font-en font-black text-slate-200">04</span>
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Day 4：北見 → 遠軽 → 紋別（ガリンコ号） → 札幌 → 小樽</h2>
+          <p class="text-slate-500 mt-1">2/12（木）タイト日：昼はセコマ、移動は遅れ耐性を確保</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full text-xs font-bold text-slate-700 border border-slate-200">上角 / つーちゃん</span>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-700 border border-cyan-100">宿：小樽「和の風」</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-slate-50 rounded-3xl border border-slate-200 p-6 md:p-8 print-flat">
+        <div class="flex items-center gap-2 mb-6">
+          <i data-lucide="clock" class="w-5 h-5 text-slate-600"></i>
+          <h3 class="font-bold text-lg">時間割（ガリンコ号 12:30 固定）</h3>
+        </div>
+
+        <ol class="relative border-s border-slate-300 pl-6 space-y-6">
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-700 ring-4 ring-white"></span>
+            <div class="font-mono text-emerald-700 font-bold">朝</div>
+            <div class="font-bold">ルートイン北見：朝食</div>
+            <div class="text-sm text-slate-600">移動が長いので、朝はしっかり食べる。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">7:46–8:39</div>
+            <div class="font-bold">特急：北見 → 遠軽</div>
+            <div class="text-sm text-slate-600">JRパス利用。遠軽でバスに乗り継ぎ。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></span>
+            <div class="font-mono text-indigo-700 font-bold">9:15–10:51</div>
+            <div class="font-bold">バス：遠軽 → 紋別</div>
+            <div class="text-sm text-slate-600">紋別は「セコマ→港」の順で無駄なく。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-amber-600 ring-4 ring-white"></span>
+            <div class="font-mono text-amber-700 font-bold">11:00–</div>
+            <div class="font-bold">セイコーマート紋別海洋公園店で昼食調達</div>
+            <div class="text-sm text-slate-600">時間がタイトなのでセコマ固定。ホットシェフ＋飲み物でOK。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-cyan-700 ring-4 ring-white"></span>
+            <div class="font-mono text-cyan-800 font-bold">12:30–13:30</div>
+            <div class="font-bold">ガリンコ号（12:30便）</div>
+            <div class="text-sm text-slate-600">乗船前にトイレ・補給を済ませる。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></span>
+            <div class="font-mono text-indigo-700 font-bold">14:35–</div>
+            <div class="font-bold">紋別 → 遠軽（バスで戻る）</div>
+            <div class="text-sm text-slate-600">遅延に備え、次の特急に余裕を持って接続する。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">16:23–20:02</div>
+            <div class="font-bold">特急：遠軽 → 札幌</div>
+            <div class="text-sm text-slate-600">JRパス利用。札幌で小樽行きに乗り継ぎ。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">20:30–21:30</div>
+            <div class="font-bold">札幌 → 小樽（普通列車）→ 和の風チェックイン</div>
+            <div class="text-sm text-slate-600">なるとは翌日昼に回す（この夜は近場でサッと）。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-700 ring-4 ring-white"></span>
+            <div class="font-mono text-emerald-700 font-bold">夜</div>
+            <div class="font-bold">小樽の夜ごはん（和の風近く）</div>
+            <div class="text-sm text-slate-600">候補：らく天など。到着が遅いので「営業している店」を優先。</div>
+          </li>
+        </ol>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="utensils" class="w-4 h-4 text-blue-600"></i> 食事（Day4）
+            </div>
+            <div class="text-sm text-slate-600">
+              朝：ホテル朝食<br>
+              昼：紋別セコマ（固定）<br>
+              夜：小樽の飯屋（海鮮/居酒屋系）<br>
+              <span class="text-xs text-slate-500">目安：2,500〜5,000円/人</span>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-slate-600"></i> 注意
+            </div>
+            <div class="text-sm text-slate-600">
+              紋別は時間が本当にタイト。バス降車→セコマ→港の順で一直線。買い物は“必要最小”。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="bed" class="w-5 h-5 text-slate-700"></i>
+            <h3 class="font-bold text-lg">宿（Day4）</h3>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-cyan-50 border border-cyan-100">
+            <div class="font-bold text-cyan-900">小樽「和の風」</div>
+            <div class="text-sm text-cyan-900/80 mt-1">2名で宿泊。翌日は小樽観光＋なると。</div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="font-bold mb-2 flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> 今日の達成
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+            <li>ガリンコ号12:30便に乗る（旅の核）</li>
+            <li>昼はセコマ固定で遅延耐性を作る</li>
+            <li>夜に小樽入りして翌日に余白を残す</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Day 5 -->
+    <section id="day5" class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto fade-in-section">
+    <div class="flex items-end justify-between gap-4 flex-wrap mb-8">
+      <div class="flex items-center gap-4">
+        <span class="text-4xl font-en font-black text-slate-200">05</span>
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold">Day 5：小樽（昼：なると） → 札幌（歴史館） → 新千歳 → 関西（22:00着）</h2>
+          <p class="text-slate-500 mt-1">2/13（金）夜便なので、昼〜夕方に観光と土産の余裕あり</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 rounded-full text-xs font-bold text-slate-700 border border-slate-200">上角 / つーちゃん</span>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-700 border border-cyan-100">フライト：12:00新千歳着／22:00関西着（予定）</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-slate-50 rounded-3xl border border-slate-200 p-6 md:p-8 print-flat">
+        <div class="flex items-center gap-2 mb-6">
+          <i data-lucide="clock" class="w-5 h-5 text-slate-600"></i>
+          <h3 class="font-bold text-lg">時間割（夜便で帰阪）</h3>
+        </div>
+
+        <ol class="relative border-s border-slate-300 pl-6 space-y-6">
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">午前</div>
+            <div class="font-bold">小樽観光（運河・堺町通り・カフェ）</div>
+            <div class="text-sm text-slate-600">なるとまでに軽く歩いて腹を空かせる。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-amber-600 ring-4 ring-white"></span>
+            <div class="font-mono text-amber-700 font-bold">昼</div>
+            <div class="font-bold">若鶏時代なると（昼に固定）</div>
+            <div class="text-sm text-slate-600">この旅の“食のハイライト”。行列前提で早めに並ぶ。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">14:17–14:57</div>
+            <div class="font-bold">JR快速：小樽 → 札幌</div>
+            <div class="text-sm text-slate-600">この日がJRパス最終日想定。札幌で土産タイム確保。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-slate-700 ring-4 ring-white"></span>
+            <div class="font-mono text-slate-700 font-bold">15:30–16:30</div>
+            <div class="font-bold">雪印メグミルク「酪農と乳の歴史館」</div>
+            <div class="text-sm text-slate-600">完全予約制。平日枠のみなので事前予約必須。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-700 ring-4 ring-white"></span>
+            <div class="font-mono text-emerald-700 font-bold">17:00–18:00</div>
+            <div class="font-bold">札幌駅周辺で土産・軽食</div>
+            <div class="text-sm text-slate-600">空港で慌てないよう、札幌で買い切る。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-blue-600 ring-4 ring-white"></span>
+            <div class="font-mono text-blue-700 font-bold">18:18–18:57</div>
+            <div class="font-bold">快速エアポート：札幌 → 新千歳空港</div>
+            <div class="text-sm text-slate-600">チェックイン・保安検査に余裕を残す。</div>
+          </li>
+
+          <li class="relative">
+            <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-white"></span>
+            <div class="font-mono text-indigo-700 font-bold">20:00頃</div>
+            <div class="font-bold">新千歳 → 関西（22:00着予定）</div>
+            <div class="text-sm text-slate-600">夜便で帰阪。遅延時は空港で食事・待機。</div>
+          </li>
+        </ol>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="utensils" class="w-4 h-4 text-blue-600"></i> 食事（Day5）
+            </div>
+            <div class="text-sm text-slate-600">
+              昼：なると（半身揚げ）<br>
+              夜：札幌〜空港で軽め（時間次第）<br>
+              <span class="text-xs text-slate-500">目安：2,500〜5,500円/人</span>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-slate-200 print-flat">
+            <div class="flex items-center gap-2 font-bold text-slate-800 mb-1">
+              <i data-lucide="calendar" class="w-4 h-4 text-slate-600"></i> 余白の使い方
+            </div>
+            <div class="text-sm text-slate-600">
+              小樽を長めに取りたい場合は「歴史館を短縮/別日に」も可能。ただし予約制なので計画優先。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="info" class="w-5 h-5 text-slate-700"></i>
+            <h3 class="font-bold text-lg">最終確認</h3>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-2 list-disc pl-5">
+            <li>雪印メグミルク歴史館：予約完了しているか</li>
+            <li>空港アクセス：札幌→新千歳の時間に余裕があるか</li>
+            <li>なると：行列なら「早め入店」優先</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-slate-200 p-6 print-flat">
+          <div class="font-bold mb-2 flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> 旅の回収
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1 list-disc pl-5">
+            <li>旭山（夜）・雪まつり・ガリンコ号をフル回収</li>
+            <li>北見焼肉＋札幌寿司＋小樽なるとでグルメも回収</li>
+            <li>夜便で帰阪、最後まで観光時間を確保</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        
+
+<section id="budget" class="pt-6">
+          <div class="bg-slate-900 text-white rounded-3xl p-6 md:p-10 relative overflow-hidden print-flat">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-900"></div>
+            <div class="relative z-10 space-y-8">
+
+              <div class="text-center">
+                <h2 class="text-2xl md:text-3xl font-bold">費用（概算・入力式）</h2>
+                <p class="text-slate-300 mt-2 text-sm">快活は「ナイト8h/9h」狙い。実際の料金が分かったら数値を入れて再計算。</p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+                <div class="p-4 rounded-2xl bg-white/10 border border-white/10 md:col-span-2">
+                  <div class="text-xs text-slate-300 mb-1">航空券（往復/人）</div>
+                  <input id="inpFlight" type="number" value="30000" min="0" class="w-full bg-white/10 border border-white/10 rounded-xl px-3 py-2 text-white">
+                </div>
+                <div class="p-4 rounded-2xl bg-white/10 border border-white/10 md:col-span-2">
+                  <div class="text-xs text-slate-300 mb-1">小樽（1泊/人：残留2名のみ）</div>
+                  <input id="inpOtaru" type="number" value="5000" min="0" class="w-full bg-white/10 border border-white/10 rounded-xl px-3 py-2 text-white">
+                </div>
+                <div class="p-4 rounded-2xl bg-white/10 border border-white/10 md:col-span-2">
+                  <div class="text-xs text-slate-300 mb-1">市内交通（残留2名：概算/人）</div>
+                  <input id="inpCityRemain" type="number" value="3000" min="0" class="w-full bg-white/10 border border-white/10 rounded-xl px-3 py-2 text-white">
+                </div>
+
+                <div class="p-4 rounded-2xl bg-white/10 border border-white/10 md:col-span-3">
+                  <div class="text-xs text-slate-300 mb-1">快活（1泊/人：つーちゃん/正規）</div>
+                  <input id="inpKaikatsuPerNight" type="number" value="3300" min="0" class="w-full bg-white/10 border border-white/10 rounded-xl px-3 py-2 text-white">
+                  <div class="mt-2 text-[11px] text-slate-300/90">※ナイト8h/9hで下がる想定（ここを書き換える）</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-white/10 border border-white/10 md:col-span-1">
+                  <div class="text-xs text-slate-300 mb-1">上角：学割%OFF</div>
+                  <input id="inpKaikatsuDiscountPct" type="number" value="20" min="0" max="100" class="w-full bg-white/10 border border-white/10 rounded-xl px-3 py-2 text-white">
+                </div>
+                <div class="p-4 rounded-2xl bg-white/10 border border-white/10 md:col-span-2">
+                  <div class="text-xs text-slate-300 mb-1">つぼけん：ホテル（1泊）</div>
+                  <input id="inpTsuboHotel" type="number" value="10000" min="0" class="w-full bg-white/10 border border-white/10 rounded-xl px-3 py-2 text-white">
+                </div>
+              </div>
+
+              <div class="bg-white/5 border border-white/10 rounded-3xl p-5 md:p-6">
+                <div class="flex items-center justify-between gap-4 flex-wrap">
+                  <div class="font-bold flex items-center gap-2">
+                    <i data-lucide="calculator" class="w-5 h-5 text-cyan-300"></i>
+                    前提（旅程で合意済み）
+                  </div>
+                  <div class="text-xs text-slate-300">※小樽→札幌→新千歳の分割運賃で計算</div>
+                </div>
+
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div class="p-4 rounded-2xl bg-white/10 border border-white/10 text-sm">
+                    <div class="font-bold text-white flex items-center gap-2"><i data-lucide="ticket" class="w-4 h-4"></i> 上角＋つーちゃん（残留）</div>
+                    <div class="text-slate-200 mt-1">パス 16,950円 + パス外（小樽→札幌800 + 札幌→新千歳1,230）= 2,030円</div>
+                  </div>
+                  <div class="p-4 rounded-2xl bg-white/10 border border-white/10 text-sm">
+                    <div class="font-bold text-white flex items-center gap-2"><i data-lucide="moon" class="w-4 h-4"></i> 快活（2泊・残留2名）</div>
+                    <div class="text-slate-200 mt-1">つーちゃん：入力×2泊 / 上角：入力×2泊×(1-学割%)</div>
+                  </div>
+                  <div class="p-4 rounded-2xl bg-white/10 border border-white/10 text-sm">
+                    <div class="font-bold text-white flex items-center gap-2"><i data-lucide="train" class="w-4 h-4"></i> つぼけん（2/11帰宅）</div>
+                    <div class="text-slate-200 mt-1">JR 都度払い：12,280円（概算・特急想定）</div>
+                  </div>
+                  <div class="p-4 rounded-2xl bg-white/10 border border-white/10 text-sm">
+                    <div class="font-bold text-white flex items-center gap-2"><i data-lucide="ship" class="w-4 h-4"></i> 体験</div>
+                    <div class="text-slate-200 mt-1">旭山 1,000円（全員） / ガリンコ号 6,000円（残留2名）</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Results -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                  <div class="flex items-center gap-2 mb-2"><i data-lucide="user"></i><div class="font-bold">上角（残留・学割）</div></div>
+                  <div id="outA" class="text-3xl font-black tracking-tight text-cyan-300 mb-2">¥0</div>
+                  <div class="text-xs text-slate-300/80 leading-relaxed">快活学割あり / パスあり</div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                  <div class="flex items-center gap-2 mb-2"><i data-lucide="user"></i><div class="font-bold">つーちゃん（残留）</div></div>
+                  <div id="outB" class="text-3xl font-black tracking-tight text-blue-300 mb-2">¥0</div>
+                  <div class="text-xs text-slate-300/80 leading-relaxed">快活正規 / パスあり</div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                  <div class="flex items-center gap-2 mb-2"><i data-lucide="user"></i><div class="font-bold">つぼけん（2/11帰宅）</div></div>
+                  <div id="outC" class="text-3xl font-black tracking-tight text-indigo-300 mb-2">¥0</div>
+                  <div class="text-xs text-slate-300/80 leading-relaxed">ホテル2泊 / パスなし</div>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <div class="text-sm tracking-widest text-slate-300 uppercase mb-2">Group Total (All-in)</div>
+                <div id="outGroup" class="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">
+                  ¥0
+                </div>
+                <div class="mt-2 text-slate-300 text-sm">
+                  ※この金額は「航空券往復30,000/人」「つぼけんホテル10,000/泊×2」「小樽5,000/人泊」「市内交通置き値」「快活入力値」を含む概算。
+                </div>
+              </div>
+
+              <div class="no-print p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                <div class="font-bold flex items-center gap-2">
+                  <i data-lucide="sparkles" class="w-5 h-5"></i> プレゼン用の言い切り
+                </div>
+                <div class="text-sm mt-1">
+                  「宿と交通を削って、流氷に全振り。快活は予約済みで、遅め入店→ナイト8h/9hで最小コスト。乗船漏れは“北見泊＋始発”で潰す。帰りは夜便で札幌も回収。」
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+<!-- Actions -->
+        <section id="actions" class="pt-6">
+          <div class="no-print bg-green-50 border border-green-200 p-8 rounded-3xl text-center print-flat fade-in-section">
+            <h2 class="text-2xl font-bold text-green-900 mb-6">ToDo（やること）</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-left max-w-5xl mx-auto">
+              <div class="flex items-start gap-3 bg-white px-4 py-3 rounded-2xl border border-green-200">
+                <i data-lucide="check" class="text-green-600 w-5 h-5 mt-0.5"></i>
+                <div>
+                  <div class="font-bold">航空券（往復30,000/人）</div>
+                  <div class="text-sm text-slate-600">2/9往路、つぼけん：2/11復路、残留2名：2/13夜便</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 bg-white px-4 py-3 rounded-2xl border border-green-200">
+                <i data-lucide="check" class="text-green-600 w-5 h-5 mt-0.5"></i>
+                <div>
+                  <div class="font-bold">快活（予約済）：入店時間の統一</div>
+                  <div class="text-sm text-slate-600">23:30〜00:30入店目標（ナイト8h/9h狙い）</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 bg-white px-4 py-3 rounded-2xl border border-green-200">
+                <i data-lucide="check" class="text-green-600 w-5 h-5 mt-0.5"></i>
+                <div>
+                  <div class="font-bold">宿の確保（分岐）</div>
+                  <div class="text-sm text-slate-600">つぼけん：旭川＋札幌 ホテル（10,000/泊×2）</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 bg-white px-4 py-3 rounded-2xl border border-green-200">
+                <i data-lucide="check" class="text-green-600 w-5 h-5 mt-0.5"></i>
+                <div>
+                  <div class="font-bold">北見ルートイン＆小樽宿の確保</div>
+                  <div class="text-sm text-slate-600">北見（2名）7,470円 / 小樽 5,000円/人</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 bg-white px-4 py-3 rounded-2xl border border-green-200">
+                <i data-lucide="check" class="text-green-600 w-5 h-5 mt-0.5"></i>
+                <div>
+                  <div class="font-bold">残留2名：U25フリーパス購入</div>
+                  <div class="text-sm text-slate-600">新千歳空港駅で購入（当日）</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 bg-white px-4 py-3 rounded-2xl border border-green-200">
+                <i data-lucide="check" class="text-green-600 w-5 h-5 mt-0.5"></i>
+                <div>
+                  <div class="font-bold">2/12 朝の動線確認</div>
+                  <div class="text-sm text-slate-600">北見→遠軽（特急）→紋別（バス）、港までの移動、受付時刻</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-6 text-sm text-green-900/80">※時刻は出発直前に最終確認（冬季は遅延・運休あり）。</p>
+          </div>
+        </section>
+
+      </div>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-500 py-8 text-center text-sm">
+    <p>&copy; 2026 Hokkaido Winter Trip Planning Committee</p>
+  </footer>
+
+  
+  <script>
+    // Icons (guard: if CDN blocked, do not break the page)
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
+    }
+
+    // Fade-in observer (fallback: show content even if unsupported)
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.fade-in-section').forEach(el => el.classList.add('is-visible'));
+    } else {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+    }
+
+    // Print button
+    document.getElementById('btnPrint')?.addEventListener('click', () => window.print());
+
+    // Budget calculator
+    const fmtYen = (n) => '¥' + (Math.round(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+    function num(id) {
+      const el = document.getElementById(id);
+      const v = Number(el?.value ?? 0);
+      return Number.isFinite(v) ? v : 0;
+    }
+
+    function calcBudget() {
+      const flight = Math.max(0, num('inpFlight'));
+      const otaru = Math.max(0, num('inpOtaru'));
+      const cityRemain = Math.max(0, num('inpCityRemain'));
+      const tsuboHotel = Math.max(0, num('inpTsuboHotel'));
+      const kaikatsuPerNight = Math.max(0, num('inpKaikatsuPerNight'));
+      const discountPct = Math.min(100, Math.max(0, num('inpKaikatsuDiscountPct')));
+
+      // Fixed assumptions
+      const passU25 = 16950;
+      const passOut = 2030; // Otaru->Sapporo 800 + Sapporo->CTS 1230
+
+      const zoo = 1000;
+      const aurora = 6000;
+
+      const cityReturn = 2000;
+
+      const kitamiPer = 3735;
+
+      const jrPaygoReturn = 12280; // つぼけん（概算・特急想定）
+
+      const nightsKaikatsu = 2;
+      const kaikatsuB = kaikatsuPerNight * nightsKaikatsu;
+      const kaikatsuA = kaikatsuPerNight * nightsKaikatsu * (1 - discountPct / 100);
+
+      // 上角（remain, discount）
+      const A = flight + (passU25 + passOut) + (kaikatsuA + kitamiPer + otaru) + (zoo + aurora) + cityRemain;
+
+      // つーちゃん（remain, regular）
+      const B = flight + (passU25 + passOut) + (kaikatsuB + kitamiPer + otaru) + (zoo + aurora) + cityRemain;
+
+      // つぼけん（return home, no pass, no aurora, no kitami, no otaru）
+      // hotel nights: 旭川＋札幌 = 2泊
+      const C = flight + jrPaygoReturn + (tsuboHotel * 2) + zoo + cityReturn;
+
+      const group = A + B + C;
+
+      document.getElementById('outA').textContent = fmtYen(A);
+      document.getElementById('outB').textContent = fmtYen(B);
+      document.getElementById('outC').textContent = fmtYen(C);
+      document.getElementById('outGroup').textContent = fmtYen(group);
+    }
+
+    ['inpFlight','inpOtaru','inpCityRemain','inpTsuboHotel','inpKaikatsuPerNight','inpKaikatsuDiscountPct'].forEach(id => {
+      document.getElementById(id)?.addEventListener('input', calcBudget);
+    });
+    calcBudget();
+  </script>
+</body>
